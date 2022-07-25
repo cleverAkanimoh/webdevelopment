@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="HTML, CSS, JAVASCRIPT" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="mainpage/dashboard for TradeABC" />
+    <meta name="author" content="Clever Akanimoh" />
+    <script src="https://kit.fontawesome.com/013e95e6af.js" crossorigin="anonymous"></script>
+    <title>Clever Akanimoh</title>
+    <link rel="icon" type="image/x-icon" href="/my_project/favicon.ico" />
+    <link rel="stylesheet" href="" />
+    <style>
+        /* links CSS*/
+        a:link,
+        a:visited,
+        a:active {
+            color: green;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: lightgreen;
+            text-decoration: underline;
+        }
+
+        a.side-c {
+            color: white;
+            font-size: x-large;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+
+        a.not-icon,
+        a.avatar-menu {
+            border: 1px solid grey;
+            border-radius: 20px;
+            padding: 12px 15px;
+        }
+
+        a.side-a:hover,
+        a.side-a:active {
+            width: 100%;
+            border-left: 7px solid gray;
+            font-weight: bold;
+            color: green;
+            background-color: rgb(248, 246, 246);
+        }
+
+        .buy-menu:link,
+        .buy-menu:visited,
+        .buy-menu:active,
+        a.need-help1:link,
+        a.need-help1:visited,
+        a.need-help1:active {
+            border: none;
+            color: black;
+            background-color: green;
+            border-radius: 5px;
+            text-align: left;
+            padding: 10px 20px;
+            font-size: small;
+            text-decoration: none;
+        }
+
+        .send-menu:link,
+        .send-menu:visited,
+        .send-menu:active,
+        .explore-link:link,
+        .explore-link:visited,
+        .explore-link:active {
+            border: 1px solid grey;
+            color: white;
+            background-color: black;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: small;
+        }
+
+        .buy-menu:hover,
+        a.need-help1:hover {
+            background-color: lightgreen;
+        }
+
+        .send-menu:hover,
+        .explore-link:hover {
+            color: black;
+            background-color: white;
+        }
+
+        /* body */
+        body {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            background-color: rgb(15, 14, 14);
+            margin: 0;
+            color: whitesmoke;
+            font-weight: bold;
+        }
+
+        /* side navigation */
+
+        .side-li-c {
+            padding: 20px 0px 20px 8px;
+            font-weight: larger;
+        }
+
+        .side-ul {
+            margin: 0;
+            padding-left: 2px;
+            width: 200px;
+            background-color: rgb(15, 14, 14);
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+            border-right: 1px solid grey;
+        }
+
+        .sidenav a {
+            display: block;
+            color: white;
+            padding: 9px;
+            text-decoration: none;
+        }
+
+
+
+        /* main-div */
+
+        .main-div {
+            margin-left: 194px;
+            margin-right: 0px;
+            padding: 0px 8px;
+            width: 86%;
+        }
+
+        /* top navigation */
+
+        .topnav {
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 0px;
+            overflow: hidden;
+            background-color: #333;
+            border-bottom: 1px solid grey;
+        }
+
+        .top-li,
+        .top-menu,
+        .f500-menu {
+            float: right;
+            padding: 5px;
+        }
+
+        .top-li-c,
+        .top-li-a {
+            padding: 10px 10px;
+            padding-left: 30px;
+            float: left;
+        }
+
+        .top-li-c,
+        .top-menu,
+        .f500-menu {
+            display: none;
+        }
+
+        /* inside main-nav-flex */
+
+        .nav-flex {
+            margin-bottom: 50px;
+        }
+
+        .asset-div,
+        .wash-div,
+        .port-div {
+            margin-bottom: 30px;
+        }
+
+        .port-div,
+        .asset-div,
+        .wash-div,
+        .recurring-div,
+        .crypto-div {
+            padding: 20px;
+            margin-top: 30px;
+            border: 1px solid grey;
+            border-radius: 8px;
+        }
+
+        .wash-div,
+        .asset-div {
+            padding: 0;
+        }
+
+        .gift-div {
+            margin-top: 0px;
+        }
+
+        .asset-div-cls {
+            text-align: center;
+            border-top: 1px solid grey;
+            padding: 40px 0px;
+        }
+
+        div.get-flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        div.get-flex-container>.avatar-div,
+        .world-div {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .avatar-div {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .world-div {
+            border-right: 1px solid grey;
+            padding-right: 70px;
+        }
+
+        div.nav-crypto-container {
+            display: flex;
+        }
+
+        div.nav-crypto-container>.nav-flex {
+            padding-left: 90px;
+        }
+
+        .gift-flex {
+            padding-left: 15px;
+            padding-right: 20px;
+        }
+
+        .started-div {
+            border: 1px solid grey;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .icon-div {
+            border: 1px solid grey;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            padding: 10px 25px;
+        }
+
+        .bitcoin-link:link,
+        .bitcoin-link:visited,
+        .bitcoin-link:active {
+            border: none;
+            color: black;
+            background-color: green;
+            border-radius: 5px;
+            text-align: left;
+            padding: 20px 70px;
+            font-size: small;
+            text-decoration: none;
+        }
+
+        .bitcoin-link:hover {
+            background-color: lightgreen;
+        }
+
+
+        .bitcoin-div {
+            padding: 30px 15px;
+        }
+
+        .sub-div {
+            border: none;
+            border-radius: 4px;
+            margin-left: 15px;
+            padding: 5px;
+            background-color: rgb(32, 30, 30);
+        }
+
+        /* table styling */
+        table {
+            text-align: left;
+            padding: 5px;
+        }
+
+        th {
+            border-bottom: 1px solid grey;
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        td {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .watch-buy:link,
+        .watch-buy:visited,
+        .watch-buy:active {
+            border: none;
+            color: black;
+            background-color: green;
+            border-radius: 5px;
+            text-align: left;
+            padding: 3px 10px;
+            font-size: small;
+            text-decoration: none;
+        }
+
+        .watch-buy:hover {
+            background-color: lightgreen;
+        }
+
+        .recurring-buys {
+            border: 1px solid grey;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .send-gift:link,
+        .send-gift:visited,
+        .send-gift:active {
+            border: none;
+            color: black;
+            background-color: green;
+            border-radius: 5px;
+            text-align: left;
+            padding: 10px 8px;
+            font-size: small;
+            text-decoration: none;
+        }
+
+        .send-gift:hover {
+            background-color: lightgreen;
+        }
+
+        .dismiss:link,
+        .dismiss:visited,
+        .dismiss:active {
+            color: white;
+            padding-left: 10px;
+        }
+
+        /* footer section */
+
+        footer {
+            width: 84%;
+        }
+        .footer-ul {
+            display: block;
+            width: 100%;
+            padding-top: 15px;
+            padding-bottom: 10px;
+            border: 1px ridge grey;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+            margin-left: 200px;
+        }
+
+        .footer-li,
+        .footer-li-c,
+        .footer-select,
+        .need-help {
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .need-help,
+        .footer-select {
+            float: right;
+            padding-right: 10px;
+        }
+
+        select:focus {
+            outline: none;
+            inline-size: 120px;
+        }
+
+        .f600-div,
+        .recurring-div2 {
+            display: none;
+            list-style-type: none;
+        }
+
+        .menu-icon {
+            display: none;
+        }
+
+        /* On screens that are less than 700px wide, make the sidebar into a topbar */
+        /*@media screen and (max-width:  1000) {
+            .sidenav {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .sidenav a {
+                float: left;
+            }
+
+            div.main-div {
+                margin-left: 0;
+                padding: 0;
+            }
+            div.nav-crypto-container>.nav-flex {
+                padding: 0px;
+                padding-top: 0px;
+                margin-top: 0;
+            }
+        }*/
+
+        @media screen and (max-width: 1450px) {
+
+            .bitcoin-link:link,
+            .bitcoin-link:visited,
+            .bitcoin-link:active {
+                padding: 20px 40px;
+            }
+
+            .sub-div {
+                margin-left: 30px;
+            }
+
+            .world-div {
+                padding-right: 30px;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+
+            a.side-a:hover,
+            a.side-a:active {
+                border: none;
+                color: black;
+                background-color: rgb(63, 149, 68);
+                border-radius: 5px;
+                text-align: left;
+                padding: 08px 0px 08px 08px;
+                font-size: small;
+                text-decoration: none;
+            }
+
+            .main-div {
+                width: 82%;
+            }
+
+            .menu-icon {
+                display: inline;
+                border: 1px groove grey;
+                border-radius: 8px;
+                padding: 12px 20px;
+            }
+
+
+            div.nav-crypto-container>.nav-flex,
+            .gift-flex {
+                padding: 3px;
+                width: 98%;
+            }
+
+            div.nav-crypto-container {
+                flex-direction: column-reverse;
+            }
+
+            .world-div {
+                padding-right: 100px;
+            }
+
+            .bitcoin-link:link,
+            .bitcoin-link:visited,
+            .bitcoin-link:active {
+                border: none;
+                color: black;
+                background-color: green;
+                border-radius: 5px;
+                text-align: left;
+                padding: 15px 50px;
+                font-size: small;
+                text-decoration: none;
+            }
+
+            .bitcoin-link:hover {
+                background-color: lightgreen;
+            }
+
+            .bitcoin-div {
+                padding: 30px 15px;
+            }
+
+            .sub-div {
+                border: none;
+                border-radius: 4px;
+                padding: 4px;
+                background-color: rgb(32, 30, 30);
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+
+            body {
+                margin: 0;
+                padding: 0;
+                width: 99%;
+            }
+
+            .sidenav,
+            .top-li-a {
+                display: none;
+            }
+
+            .topnav {
+                width: 105%;
+                overflow: visible;
+            }
+
+            .top-menu {
+                float: left;
+                display: inline;
+                padding: 15px;
+            }
+
+            .top-li {
+                display: inline;
+                padding: 12px;
+            }
+
+            li.top-menu {
+                display: block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #333;
+                width: 95%;
+                height: 350px;
+                z-index: 0;
+                text-align: left;
+                padding-top: 20px;
+            }
+
+            .top-menu:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown-a {
+                display: block;
+                margin: 15px;
+            }
+
+            .dropdown-c:link,
+            .dropdown-c:visited,
+            .dropdown-c:hover,
+            .dropdown-c:active {
+                font-size: xx-large;
+                padding-left: 40px;
+                text-decoration: none;
+                color: whitesmoke;
+            }
+
+            .dropdown-a:link,
+            .dropdown-a:visited,
+            .dropdown-a:active {
+                text-decoration: none;
+                background-color: black;
+                color: whitesmoke;
+                padding: 09px 0px 09px 30px;
+                border: none;
+                border-radius: 4px;
+            }
+
+            .dropdown-a:hover {
+                border: 1px solid grey;
+                color: green;
+            }
+
+            .main-div {
+                margin: 0%;
+                width: 100%;
+                padding: 0%;
+            }
+
+            div.nav-crypto-container>.nav-flex,
+            .gift-flex {
+                margin-top: 40px;
+            }
+
+            .get-flex-container {
+                flex-direction: row;
+                justify-content: left;
+            }
+
+            .get-flex-container>.world-div,
+            .avatar-div {
+                padding: 0;
+            }
+
+            .get-flex-container>.world-div {
+                border: none;
+                padding-bottom: 5px;
+            }
+
+            .asset-div {
+                width: 100%;
+            }
+
+            .wash-div {
+                width: 100%;
+            }
+
+            .footer-select {
+                float: none;
+            }
+
+            .recurring-div {
+                display: none;
+            }
+
+            .gift-flex {
+                width: 100%;
+            }
+
+            .crypto-div {
+                width: 93%;
+            }
+
+            .need-help {
+                float: none;
+            }
+
+            .footer-li {
+                display: block;
+                padding: 5px;
+            }
+
+            .footer-ul {
+                margin: 0;
+            }
+
+            footer {
+                
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            body {
+                font-size: normal;
+            }
+
+            .top-li-a,
+            .avatar-menu,
+            .side-li,
+            .sidenav,
+            .top-li-c {
+                display: none;
+            }
+
+            .main-div {
+                float: none;
+                padding: 0;
+                overflow-x: auto;
+            }
+
+            div.nav-crypto-container>.nav-flex,
+            .gift-flex {
+                width: 94%;
+            }
+
+            .bitcoin-link:link,
+            .bitcoin-link:visited,
+            .bitcoin-link:active {
+                padding: 10px 25px;
+            }
+
+            .bitcoin-div {
+                padding: 20px 10px;
+            }
+
+            .sub-div {
+                border: none;
+                border-radius: 4px;
+                padding: 0px;
+                background-color: rgb(32, 30, 30);
+            }
+
+            .avatar-div {
+                margin-right: 0;
+                padding: 0;
+            }
+
+            .port-div,
+            .asset-div,
+            .recurring-div,
+            .crypto-div {
+                padding: 12px;
+                margin-top: 5px;
+                border: 1px solid grey;
+                border-radius: 8px;
+                width: 100%;
+            }
+
+            .wash-div {
+                width: 105%;
+                padding: 0;
+            }
+
+            .recurring-div2 {
+                display: block;
+                padding: 10px;
+                margin-top: 7px;
+                border: 1px solid grey;
+                border-radius: 8px;
+                width: 100%;
+            }
+
+            th {
+                display: none;
+            }
+
+            .footer-li,
+            .need-help,
+            .footer-select {
+                text-align: center;
+            }
+
+            .need-help,
+            .footer-select,
+            .footer-li-c {
+                display: none;
+            }
+
+            .f600-div {
+                display: flex;
+                flex-direction: column-reverse;
+                padding: 10px;
+                margin-right: 100px;
+                text-align: center;
+            }
+
+            li.footer-li {
+                margin-right: 100px;
+            }
+
+            .f600-div>.footer-li-c1,
+            .f600-help {
+                padding: 10px;
+            }
+
+            .footer-li-c1 {
+                border-top: 1px solid grey;
+                margin-top: 15px;
+                width: 100%;
+            }
+
+            .asset-div-cls {
+                border: none;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .send-menu,
+            .buy-menu {
+                display: none;
+            }
+
+            .topnav {
+                width: 100%;
+            }
+
+            .top-li, a.menu-icon, #top-profile a, a.not-icon {
+                display: inline-block;
+                padding: 8px 8px 8px 8px;
+            }
+
+            li.top-menu {
+                display: none;
+            }
+
+            .f500-menu {
+                display: inline;
+            }
+
+            .click-cj:link,
+            .click-cj:visited,
+            .click-cj:hover,
+            .click-cj:active {
+                color: whitesmoke;
+                list-style-type: none;
+                font-weight: bolder;
+                font-size: x-large;
+                text-decoration: none;
+                color: whitesmoke;
+                padding-bottom: 15px;
+                margin-right: 70px;
+            }
+
+            .click-j:link,
+            .click-j:visited {
+                text-decoration: none;
+                background-color: #333;
+                padding: 09px 20px;
+                border: none;
+                margin: 1px 0px 5px 0px;
+            }
+
+            .click-j:hover,
+            .click-j:active {
+                border-left: 6px solid grey;
+                color: green;
+                background-color: rgb(255, 255, 255, 0.9);
+            }
+
+            .click-buy:link,
+            .click-buy:visited,
+            .click-buy:active {
+                border: none;
+                color: black;
+                background-color: green;
+                border-radius: 5px;
+                padding: 10px 20px;
+                font-size: small;
+                text-align: center;
+                text-decoration: none;
+                margin: 20px 0px 20px 0px;
+            }
+
+            .click-send:link,
+            .click-send:visited,
+            .click-send:active {
+                text-decoration: none;
+                color: white;
+                background-color: black;
+                border-radius: 5px;
+                padding: 10px 20px;
+                font-size: small;
+                text-align: center;
+                margin: 10px 0px 0px 0px;
+            }
+
+            .click-buy:hover {
+                background-color: lightgreen;
+            }
+
+            .click-send:hover {
+                color: black;
+                background-color: white;
+            }
+
+            .menu-icon {
+                display: inline;
+            }
+
+            .f500-menu a:not(:first-child) {
+                display: none;
+            }
+
+            .f500-menu.responsive a.menu-icon {
+                position: absolute;
+                right: 26%;
+                top: 2%;
+                padding: 13px;
+            }
+
+            .f500-menu.responsive a {
+                display: block;
+            }
+
+            .f500-menu a.menu-icon {
+                display: inline;
+            }
+
+            .main-div {
+                width: 101%;
+                padding: 0;
+                margin-right: 0;
+                overflow: auto;
+                overflow-x: auto;
+            }
+
+            .nav-flex {
+                width: 1000%;
+            }
+
+            .bitcoin-link:link,
+            .bitcoin-link:visited,
+            .bitcoin-link:active {
+                padding: 10px 15px;
+            }
+
+            .bitcoin-div {
+                padding: 15px 12px;
+            }
+
+            .wash-div {
+                width: 105%;
+            }
+
+            .f600-div {
+                padding-left: 3px;
+                padding-right: 0px;
+                text-align: center;
+            }
+
+            .footer-li {
+                padding-right: 0px;
+            }
+
+            select:focus {
+                inline-size: auto;
+            }
+
+            select {
+                height: 35px;
+                border-radius: 7px;
+            }
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "f500-menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "f500-menu";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <div class="sidenav">
+            <ul class="side-ul">
+                <li class="side-li-c" id="side-li">
+                    <a href="" class="side-c"><b>Coinbase</b></a>
+                </li>
+                <li id="side-li" class="side-li"><a href="" class="side-a"><i class="fa-solid fa-chart-pie"
+                            id="side-li-icon"></i> Assets</a></li>
+                <li id="side-li" class="side-li"><a href="" class="side-a"><i class="fa-solid fa-chart-line"
+                            id="side-li-icon"></i> Trade</a></li>
+                <li id="side-li" class="side-li"><a href="" class="side-a"><i class="fa-solid fa-credit-card"
+                            id="side-li-icon"></i> Pay</a></li>
+                <li id="side-li" class="side-li"><a href="" class="side-a"><i class="fa-solid fa-thumbs-up"
+                            id="side-li-icon"></i> For you</a></li>
+                <li id="side-li" class="side-li"><a href="" class="side-a">&nbsp; <i
+                            class="fa-solid fa-ellipsis-vertical" id="side-li-icon"></i>&nbsp; More</a></li>
+            </ul>
+        </div>
+
+        <div class="main-div">
+            <div class="topnav">
+                <ul class="top-ul">
+                    <li class="top-li-c">
+                        <a href="#Coinbase" style="color: white; font-size: larger;text-decoration: none;">Coinbase</a>
+                    </li>
+                    <li class="top-li-a">
+                        <a href="#assets" style="color: white; font-size: larger;text-decoration: none;">Assets</a>
+                    </li>
+                    <li class="top-li" id="top-profile">
+                        <a href="#user" class="avatar-menu" title="Profile"><i class="fa-solid fa-user-tie"></i></a>
+                    </li>
+                    <li class="top-li">
+                        <a href="#notification" class="not-icon" title="Notifications"><i
+                                class="fa-solid fa-bell"></i></a>
+                    </li>
+                    <li class="top-menu">
+                        <a href="javascript:void(0);" class="menu-ico" title="Menu"><i class="fa-solid fa-bars"
+                                title="menu"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-c">Coinbase</a>
+                            <a href="#" class="dropdown-a"><i class="fa-solid fa-chart-pie" id="side-li-icon"></i>
+                                Assets</a>
+                            <a href="#" class="dropdown-a"><i class="fa-solid fa-chart-line" id="side-li-icon"></i>
+                                Trade</a>
+                            <a href="#" class="dropdown-a"><i class="fa-solid fa-credit-card" id="side-li-icon"></i>
+                                Pay</a>
+                            <a href="#" class="dropdown-a"><i class="fa-solid fa-thumbs-up" id="side-li-icon"></i> For
+                                you</a>
+                            <a href="#" class="dropdown-a">&nbsp; <i class="fa-solid fa-ellipsis-vertical"
+                                    id="side-li-icon"></i>&nbsp;More</a>
+                        </div>
+                    </li>
+
+                    <!-- drop down using js onClick event/function -->
+                    <li class="f500-menu" id="myTopnav">
+                        <div class="f500-top">
+                            <a href="#" class="click-cj">Coinbase</a>
+                            <a href="#" class="click-j"><i class="fa-solid fa-chart-pie" id="side-li-icon"></i>
+                                Assets</a>
+                            <a href="#" class="click-j"><i class="fa-solid fa-chart-line" id="side-li-icon"></i>
+                                Trade</a>
+                            <a href="#" class="click-j"><i class="fa-solid fa-credit-card" id="side-li-icon"></i>
+                                Pay</a>
+                            <a href="#" class="click-j"><i class="fa-solid fa-thumbs-up" id="side-li-icon"></i> For
+                                you</a>
+                            <a href="#" class="click-j">&nbsp; <i class="fa-solid fa-ellipsis-vertical"
+                                    id="side-li-icon"></i>&nbsp;More</a>
+                            <a href="#send" class="click-send">Send/Recieve</a>
+                            <a href="#buy" class="click-buy">Buy/Sell</a>
+                            <a href="javascript:void(0);" class="menu-icon" title="menu" onclick="myFunction()"><i
+                                    class="fa-solid fa-bars" title="menu"></i></a>
+                        </div>
+                    </li>
+                    <li class="top-li"><a href="#send" class="send-menu">Send/Recieve</a></li>
+                    <li class="top-li"><a href="#buy" class="buy-menu">Buy/Sell</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-crypto-container">
+                <div class="nav-flex">
+                    <div class="port-div">
+                        <div>
+                            <p><b>PortFolio Balance</b><br />NGN0.00</p>
+                            <div class="started-div">
+                                <p>
+                                    <b>Get Started With Bitcoin</b><br />
+                                    <a href="">learn more</a>
+                                </p>
+
+                                <div class="get-flex-container">
+                                    <div class="world-div">
+                                        <p>
+                                            <b>The world's #1 cryptocurrency<br><br>
+                                                Trade 24/7 hours a day<br><br>
+                                                Get Started with a little as $5</b>
+                                        </p>
+                                    </div>
+
+                                    <div class="avatar-div">
+                                        <div class="sub-div">
+                                            <div class="icon-div">
+                                                <i class="fa-solid fa-user-tie" title="profile"></i><br /><a
+                                                    href="">12,345+</a> customers bought<br />Bitcoin Today
+                                            </div>
+                                            <div class="bitcoin-div">
+                                                <a href="" class="bitcoin-link">Buy Bitcoin</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="asset-div">
+                        <p style="padding-left: 10px;">Your Assets</p>
+                        <div class="asset-div-cls">
+                            <img src="/my_project/resources/commerceicon.png" width="50px" alt="svg-icon">
+                            <br />
+                            <b>Get Started With crypto</b><br /><em>your crypto assets
+                                will appear
+                                here</em>
+                            <br /><br>
+                            <a href="" class="explore-link">Explore Asset</a>
+                        </div>
+                    </div>
+                    <div class="wash-div">
+                        <p style="padding-left: 12px;">Washlist</p>
+                        <div style="border-top: 1px solid grey; margin: 0; ">
+                            <table style="padding: 0;">
+                                <tr>
+                                    <th style="padding-right: 20px;" class="name">Name</th>
+                                    <th>Price</th>
+                                    <th>Change</th>
+                                    <th>Market Cap</th>
+                                    <th style="text-align: right;">Watch</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>
+                                            <i class="fa-brands fa-bitcoin">
+                                            </i>
+                                            Bitcoin
+                                        </b><br>{{btc}}
+                                    </td>
+                                    <td>{{price in numbers}}</td>
+                                    <td>{{Change-in-number -|+}}</td>
+                                    <td>{{Market-cap}}</td>
+                                    <td
+                                        style="text-align: left; padding-right: 0px; display: flex;justify-content: space-between;">
+                                        <a href="" class="watch-buy">Buy</a><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-bars"></i>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="recurring-div2">
+                        <div style="padding-bottom: 10px;">Recurring Buys <a href="" style="float: right;">add new</a>
+                        </div>
+                        <div class="recurring-buys1" style="display: inline-block;padding-top: 10px;">
+                            <img src="/my_project/resources/bitcoinAndOtherCrypto-1.svg" width="60px" alt="svg-icon.."
+                                style="float: left;"> Learn about recurring buys<br><em
+                                style="font-weight: normal;color:grey">invest daily, weekly or month...</em>
+                            <a href=""><i class="fa-solid fa-angles-right" style="float: right;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gift-flex">
+                    <div class="gift-div">
+                        <div class="crypto-div">
+                            <p>
+                                Crypto gifts<a href=""><i class="fa-solid fa-arrow-right"
+                                        style="float: right; padding-left: 5px;"></i><i class="fa-solid fa-arrow-left"
+                                        style="float: right;"></i></a><br /><br />
+                                <em style="font-weight: normal;color:grey">Give crypto to your
+                                    friends<br />and family</em>
+                            </p>
+                            <p style="display: inline-block;">
+                            <div style="float: left;">
+                                <a href="" class="send-gift">Send gift</a> <a href="#" class="dismiss">Dismiss</a>
+                            </div>
+                            <img src="/my_project/resources/ProductIcon_Pay.svg" width="50px" alt="svg-icon"
+                                style="float: right; margin: 0px;">
+                            </p>
+                        </div>
+
+                        <div class="recurring-div">
+                            <div style="padding-bottom: 10px;">Recurring Buys <a href="" style="float: right;">add new</a>
+                            </div>
+                            <div class="recurring-buys1" style="display: inline-block;padding-top: 10px;">
+                                <img src="/my_project/resources/bitcoinAndOtherCrypto-1.svg" width="70px" alt="svg-icon.." style="float: left;">
+                                Learn about recurring buys<br><em style="font-weight: normal;color:grey">invest daily, weekly or month...</em>
+                                <a href=""><i class="fa-solid fa-angles-right" style="float: right;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <footer class="footer-div">
+                <ul class="footer-ul">
+                    <li class="footer-li"><a href="">Home</a></li>
+                    <li class="footer-li"><a href="">Career</a></li>
+                    <li class="footer-li"><a href="">legal & privacy</a></li>
+                    <li class="footer-li-c"><em>© 2022 powered by <i
+                                style="font-family: georgia; font-weight:bold;">cleverly</i></em></li>
+                    <li class="need-help"><a href="#" class="need-help1">Need help?</a></li>
+                    <li class="footer-select">
+                        <select class="footer-select">
+                            <option>---select lang---</option>
+                            <option>English</option>
+                            <option>French</option>
+                            <option>Portugese</option>
+                            <option>Spainish</option>
+                            <option>Swahili</option>
+                            <option>Yoruba</option>
+                            <option>Chinese</option>
+                        </select>
+                    </li>
+                    <div class="f600-div">
+                        <div class="footer-li-c1">
+                            <em>© 2022 powered by <i style="font-family: georgia; font-weight:bold;">cleverly</i></em>
+                        </div>
+
+                        <div class="f600-help">
+                            <a href="#" class="need-help1">Need help?</a>
+                            <select class="f600-select">
+                                <option>---select lang---</option>
+                                <option>English</option>
+                                <option>French</option>
+                                <option>Portugese</option>
+                                <option>Spanish</option>
+                                <option>Swahili</option>
+                                <option>Yoruba</option>
+                                <option>Chinese</option>
+                            </select>
+                        </div>
+                    </div>
+        </div>
+        </footer>
+    </div>
+    </div>
+
+    <script></script>
+</body>
+
+</html>
