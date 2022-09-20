@@ -1,2 +1,0 @@
-# webdevelopment
-all web apps
